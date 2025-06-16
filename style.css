@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand';
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
@@ -30,7 +30,7 @@ section::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#000, #0f0, #000);
+    background: linear-gradient(#000, red, #000);
     animation: animate 5s linear infinite;
 }
 
@@ -55,7 +55,7 @@ section span {
 }
 
 section span:hover {
-    background: #0f0;
+    background: red;
     transition: 0s;
 }
 
@@ -69,7 +69,7 @@ section .signin {
     align-items: center;
     padding: 2.6vw;
     border-radius: 0.3vw;
-    box-shadow: 0 0.9vw 2.2vw rgba(0, 0, 0, 9);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
 section .signin .content {
@@ -84,8 +84,9 @@ section .signin .content {
 
 section .signin .content h2 {
     font-size: 2em;
-    color: #0f0;
+    color: red;
     text-transform: uppercase;
+    text-shadow: 0 0 8px red;
 }
 
 section .signin .content .form {
@@ -104,15 +105,15 @@ section .signin .content .form .inputBox input {
     position: relative;
     width: 100%;
     background: #333;
-    border: none;
+    border: 1px solid #FF3C3C;
     outline: none;
     padding: 1.6vw 0.6vw 0.4vw;
-    border-radius: 0.3vw;
-    color: #fff;
-    font-size: 1vw;
+    border-radius: 8px;
+    color: red;
+    font-size: 15px;
 }
 
-section .signin .content .form .inputBox i {
+section .signin .content .form .inputBox .Alert {
     position: absolute;
     left: 0;
     padding: 0.9vw 0.6vw;
@@ -120,6 +121,18 @@ section .signin .content .form .inputBox i {
     color: #aaa;
     transition: 0.5s;
     pointer-events: none;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #FF3C3C;
+    user-select: none;
+    z-index: 99;
 }
 
 .signin .content .form .inputBox input:focus~i,
@@ -142,25 +155,30 @@ section .signin .content .form .inputBox i {
 }
 
 .signin .content .form .links a:nth-child(2) {
-    color: #0f0;
+    color: white;
 }
 
 .signin .content .form .inputBox input[type="submit"] {
     padding: 0.6vw;
-    background: #0f0;
-    color: #000;
+    background: red;
+    box-shadow: 0 0 10px red;
+    color: #fff;
     font-weight: 600;
     font-size: 1.35em;
     letter-spacing: 0.05vw;
     cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signin .content .form .inputBox input[type="submit"]:hover {
+    background-color: #B20000;
+    box-shadow: 0 0 15px #FF1C1C;
 }
 
 input[type="submit"]:active {
     opacity: 0.6;
 }
 
-
-/* copy css */
 .inputBox input:invalid {
     border-color: red;
 }
@@ -171,7 +189,6 @@ input[type="submit"]:active {
 
 .error-icon {
     display: none;
-    /* Hide error icon by default */
 }
 
 .inputBox .error-icon::after {
@@ -189,7 +206,6 @@ input[type="submit"]:active {
     top: 50%;
     transform: translateY(-50%);
 }
-
 
 .error-message {
     color: red;
@@ -213,7 +229,7 @@ input[type="submit"]:active {
 }
 
 .alert-box {
-    background: #fff;
+    background: #2c2f33;
     padding: 40px 30px 30px;
     border-radius: 10px;
     text-align: center;
@@ -222,10 +238,11 @@ input[type="submit"]:active {
     max-width: 90%;
     width: 300px;
     position: relative;
+    color: white;
 }
 
 .checkmark-circle {
-    background-color: #4CAF50;
+    background-color: red;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -253,7 +270,7 @@ input[type="submit"]:active {
 }
 
 .alert-box button {
-    background-color: #4CAF50;
+    background-color: red;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -265,7 +282,8 @@ input[type="submit"]:active {
 }
 
 .alert-box button:hover {
-    background-color: #45a049;
+    background-color: #b20000;
+    box-shadow: 0 0 10px #ff1c1c;
 }
 
 @keyframes slideUp {
@@ -290,8 +308,6 @@ input[type="submit"]:active {
         font-size: 12px;
     }
 }
-
-/* copy css */
 
 @media (max-width: 900px) {
     section span {
@@ -466,16 +482,6 @@ input[type="submit"]:active {
 }
 
 @media (min-width: 1200px) {
-    /* section {
-        gap: 0.5vw;
-        padding: 2vw;
-    }
-
-    section span {
-        width: calc(5vw - 0.8vw);
-        height: calc(5vw - 0.8vw);
-    } */
-
     section .signin {
         width: 40vw;
         padding: 4vw;

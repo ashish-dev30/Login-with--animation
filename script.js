@@ -73,3 +73,38 @@ document.addEventListener("keydown", function (event) {
         closeAlert();
     }
 });
+
+// const toggleEye = document.getElementById("toggleEye");
+// const passwordInput = document.getElementById("passwordInput");
+
+// toggleEye.addEventListener("click", function () {
+//     const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+//     passwordInput.setAttribute("type", type);
+//     this.textContent = type === "password" ? "👁️" : "🙈";
+// });
+
+// const togglePassword = document.getElementById("togglePassword");
+// const password = document.getElementById("password");
+
+// togglePassword.addEventListener("click", function () {
+//     const type = password.getAttribute("type") === "password" ? "text" : "password";
+//     password.setAttribute("type", type);
+
+//     this.classList.toggle("fa-eye");
+//     this.classList.toggle("fa-eye-slash");
+// })
+
+
+const passwordInput = document.getElementById("passwordInput");
+const toggleEye = document.getElementById("toggleEye");
+const eyeIcon = toggleEye.querySelector("i");
+
+toggleEye.addEventListener("click", () => {
+    const isHidden = passwordInput.type === "password";
+    passwordInput.type = isHidden ? "text" : "password";
+
+    // Toggle icon
+    eyeIcon.classList.toggle("fa-eye");
+    eyeIcon.classList.toggle("fa-eye-slash");
+});
+

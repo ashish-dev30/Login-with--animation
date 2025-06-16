@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In form</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -56,13 +58,16 @@
                 <form class="form" onsubmit="return submitLogin()">
                     <div class="inputBox">
                         <input type="email" id="emailInput" required>
-                        <i>Email</i>
+                        <i class="Alert">Email</i>
                         <span id="emailIcon" class="error-icon"></span>
                         <div id="emailError" class="error-message">Email can't be blank</div>
                     </div>
                     <div class="inputBox">
                         <input type="password" id="passwordInput" required>
-                        <i>Password</i>
+                        <i class="Alert">Password</i>
+                        <div id="toggleEye" class="eye-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
                         <div id="passwordIcon" class="error-icon"></div>
                         <div id="passwordError" class="error-message">Password can't be blank</div>
                     </div>
@@ -71,7 +76,7 @@
                         <a href="#"><b>Signup</b></a>
                     </div>
                     <div class="inputBox">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Log in">
                     </div>
                 </form>
             </div>
