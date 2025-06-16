@@ -79,7 +79,7 @@ section .signin .content {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2.6vw;
+    gap: 2vw;
 }
 
 section .signin .content h2 {
@@ -87,6 +87,12 @@ section .signin .content h2 {
     color: red;
     text-transform: uppercase;
     text-shadow: 0 0 8px red;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #FF1C75;
+    text-align: center;
 }
 
 section .signin .content .form {
