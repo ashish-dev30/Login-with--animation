@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+
+    <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span>
+
+        <div class="signin">
+            <div class="content">
+                <h2>Log In</h2>
+                <form class="form" onsubmit="return submitLogin()">
+                    <div class="inputBox">
+                        <input type="email" id="emailInput" required>
+                        <i>Email</i>
+                        <span id="emailIcon" class="error-icon"></span>
+                        <div id="emailError" class="error-message">Email can't be blank</div>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" id="passwordInput" required>
+                        <i>Password</i>
+                        <div id="passwordIcon" class="error-icon"></div>
+                        <div id="passwordError" class="error-message">Password can't be blank</div>
+                    </div>
+                    <div class="links">
+                        <a href="#">Forgot Password</a>
+                        <a href="#"><b>Signup</b></a>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Custom Alert -->
+        <div id="customAlert" class="custom-alert">
+            <div class="alert-box">
+                <div class="checkmark-circle">
+                    <div class="checkmark">&#10003;</div>
+                </div>
+                <h4 id="alertMessage">Thank You!</h4>
+                <p>Your details have been successfully submitted. Thanks!</p>
+                <button onclick="closeAlert()">OK</button>
+            </div>
+        </div>
+
+    </section> <!-- partial -->
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
