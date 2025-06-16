@@ -239,12 +239,24 @@ input[type="submit"]:active {
     padding: 40px 30px 30px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px #FF0000;
     animation: slideUp 0.4s ease-out;
     max-width: 90%;
     width: 300px;
     position: relative;
     color: white;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .checkmark-circle {
@@ -259,6 +271,19 @@ input[type="submit"]:active {
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
+    animation: glowIcon 1.5s infinite ease-in-out;
+}
+
+@keyframes glowIcon {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px #FF0000;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #FF3C3C, 0 0 30px #FF1C75;
+    }
 }
 
 .checkmark {
@@ -290,18 +315,6 @@ input[type="submit"]:active {
 .alert-box button:hover {
     background-color: #b20000;
     box-shadow: 0 0 10px #ff1c1c;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(40px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 /* Responsive Media Queries */
